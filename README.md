@@ -11,7 +11,7 @@ If you've coded in Python and used GitHub before, you probably already have thes
 3. Set up GitHub using [this tutorial](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)
 
 ### The Actual Training :)
-Clone this repository by running "git clone " in the command line, and follow the instructions in fa2024_training.py. Make sure to complete all the steps and push your final code to your branch of the repository! 
+Clone this repository by running "git clone https://github.com/M-STARX/fa2024-training.git" in the command line, and follow the instructions in fa2024_training.py. Make sure to complete all the steps and push your final code to your branch of the repository! 
 
 ## Resources
 - [List of Common GitHub Commands](https://github.com/joshnh/Git-Commands). You can also find this list by typing "git help" in the command terminal when you're in a repository!
