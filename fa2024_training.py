@@ -26,7 +26,7 @@ import math
 # To practice with Python, you'll write a couple functions to manipulate a numpy array,
 # as well as a main script to run those functions on a sample array
 
-# TODO: Complete the function fillArray()
+# : Complete the function fillArray()
 # This function fills a numpy array with values from data_list in order.
 # If size is specified, the array is declared with shape (1, size). If size is 
 # unspecified, the array is declared with the same number of rows and columns, which is math.sqrt(len(data_list))
@@ -53,12 +53,12 @@ def fillArray(data_list, size=None):
 # Lists are a common Python container, similar to vectors in C++ and MATLAB
 list = [1, 2, 3, 4] # this is a really simple list, with 5 elements
 
-# TODO: Call fillArray() on list (with or without a size argument -- up to you!), then store the return
+# : Call fillArray() on list (with or without a size argument -- up to you!), then store the return
 # array in a variable
 
 arr2 = fillArray(list)
 
-# TODO: Do some cool matrix math with the numpy array! There's a lot of operations built into numpy.
+# : Do some cool matrix math with the numpy array! There's a lot of operations built into numpy.
 # I don't care how you manipulate the array, but do 3 operations on it (they can be super basic, like 
 # .T or adding/subtracting a column)
     # 1. operation 1
@@ -72,7 +72,7 @@ np.reciprocal(arr2)
 # : 3-D arrays are also common in Python. Append a third dimension to your matrix (hint: use np.expand_dims())
 arr2 = np.expand_dims(arr2, axis=2)
 
-# TODO: replace None with your matrix variable to print the final array
+# : replace None with your matrix variable to print the final array
 print(f"Final Array: {arr2}")
 
 # TODO: Push your final changes to your GitHub branch in 3 steps:
