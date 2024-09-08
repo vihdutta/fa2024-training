@@ -19,7 +19,7 @@ import math
 # your computer. 
 # You can run "pip install numpy" to download the numpy library.
 
-# TODO: Use the "git checkout -b" command to create a new branch in the repository
+# Use the "git checkout -b" command to create a new branch in the repository
 # and switch to it. Name your branch your uniqname, and run "git status" to make sure
 # you successfully switched to it. If it says "on branch {uniqname}", you did it right!
 
@@ -34,13 +34,20 @@ def fillArray(data_list, size=None):
     arr = None
     if size == None:
         # TODO: initialize "arr" with equal number of rows and columns (hint: use np.empty())
+        arr = np.empty([math.sqrt(len(data_list)), math.sqrt(len(data_list))])
         # check your work:
         if (arr.shape == (math.sqrt(len(data_list)), math.sqrt(len(data_list)))): print("Array Initialized Correctly!")
     else:
         # TODO: initialize "arr" with 1 row and {size} columns
+        arr = np.empty([1, size])
+        # check your work:
         if (arr.shape == (1, size)): print("Array Initialized Correctly!") # check your work: prints the shape of the array
     # TODO: Use a for loop to fill arr with each item in data list, in order
-    
+    count = 0
+    for data in data_list:
+        arr[0, count] = data
+        count += 1
+
     # returns the array
     return arr
 
@@ -51,6 +58,8 @@ list = [1, 2, 3, 4] # this is a really simple list, with 5 elements
 # TODO: Call fillArray() on list (with or without a size argument -- up to you!), then store the return
 # array in a variable
 
+array = fillArray(list, 5)
+
 # TODO: Do some cool matrix math with the numpy array! There's a lot of operations built into numpy.
 # I don't care how you manipulate the array, but do 3 operations on it (they can be super basic, like 
 # .T or adding/subtracting a column)
@@ -58,10 +67,17 @@ list = [1, 2, 3, 4] # this is a really simple list, with 5 elements
     # 2. operation 2
     # 3. operation 3
 
+array[0, 1] = array[0, 1] - array[0, 2]
+array[0, 3] = array[0, 3] * 7
+array = np.add(array, array)
+
+
+
 # TODO: 3-D arrays are also common in Python. Append a third dimension to your matrix (hint: use np.expand_dims())
+array = np.expand_dims(array, axis = 0)
 
 # TODO: replace None with your matrix variable to print the final array
-print(f"Final Array: {None}")
+print(f"Final Array: {array}")
 
 # TODO: Push your final changes to your GitHub branch in 3 steps:
 #   1. Stage your changes for commit using the "git add" command. You can type the filename,
