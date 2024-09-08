@@ -33,25 +33,30 @@ import math
 def fillArray(data_list, size=None):
     arr = None
     if size == None:
-        # TODO: initialize "arr" with equal number of rows and columns (hint: use np.empty())
+        arr = np.empty((int(math.sqrt(len(data_list))),int(math.sqrt(len(data_list)))))
         # check your work:
         if (arr.shape == (math.sqrt(len(data_list)), math.sqrt(len(data_list)))): print("Array Initialized Correctly!")
     else:
         # TODO: initialize "arr" with 1 row and {size} columns
+        arr = np.empty(1,size)
         if (arr.shape == (1, size)): print("Array Initialized Correctly!") # check your work: prints the shape of the array
     # TODO: Use a for loop to fill arr with each item in data list, in order
-    
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            arr[i][j] = data_list[j]
     # returns the array
     return arr
 
 # TODO: Complete the main script
 # Lists are a common Python container, similar to vectors in C++ and MATLAB
-list = [1, 2, 3, 4] # this is a really simple list, with 5 elements
+list = [1, 2, 3, 4] # this is a really simple list, with 4 elements
 
 # TODO: Call fillArray() on list (with or without a size argument -- up to you!), then store the return
 # array in a variable
-
-# TODO: Do some cool matrix math with the numpy array! There's a lot of operations built into numpy.
+list2 = fillArray(list)
+list2.T
+list2 = list2+np.linalg.det(list2)
+list2 = list2*2
 # I don't care how you manipulate the array, but do 3 operations on it (they can be super basic, like 
 # .T or adding/subtracting a column)
     # 1. operation 1
@@ -59,9 +64,9 @@ list = [1, 2, 3, 4] # this is a really simple list, with 5 elements
     # 3. operation 3
 
 # TODO: 3-D arrays are also common in Python. Append a third dimension to your matrix (hint: use np.expand_dims())
-
+np.expand_dims(list2,axis=0)
 # TODO: replace None with your matrix variable to print the final array
-print(f"Final Array: {None}")
+print(f"Final Array: {list2}")
 
 # TODO: Push your final changes to your GitHub branch in 3 steps:
 #   1. Stage your changes for commit using the "git add" command. You can type the filename,
