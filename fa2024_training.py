@@ -31,19 +31,37 @@ import math
 # If size is specified, the array is declared with shape (1, size). If size is 
 # unspecified, the array is declared with the same number of rows and columns, which is math.sqrt(len(data_list))
 def fillArray(data_list, size=None):
+    arr = None
     if size == None:
-        # TODO: initialize a numpy array array with equal number of rows and columns
-        
-    print(arr.shape) # check your work: prints the shape of the array
-
+        # TODO: initialize "arr" with equal number of rows and columns (hint: use np.empty())
+        # check your work:
+        if (arr.shape == (math.sqrt(len(data_list)), math.sqrt(len(data_list)))): print("Array Initialized Correctly!")
+    else:
+        # TODO: initialize "arr" with 1 row and {size} columns
+        if (arr.shape == (1, size)): print("Array Initialized Correctly!") # check your work: prints the shape of the array
+    # TODO: Use a for loop to fill arr with each item in data list, in order
+    
+    # returns the array
+    return arr
 
 # TODO: Complete the main script
 # Lists are a common Python container, similar to vectors in C++ and MATLAB
 list = [1, 2, 3, 4] # this is a really simple list, with 5 elements
 
-# TODO: if the list has a square number of elements (i.e., 1, 4, 9, 16), call fillArray() with no size argument
-# Else, call fillArray() with a size argument equal to the list's length
+# TODO: Call fillArray() on list (with or without a size argument -- up to you!), then store the return
+# array in a variable
 
+# TODO: Do some cool matrix math with the numpy array! There's a lot of operations built into numpy.
+# I don't care how you manipulate the array, but do 3 operations on it (they can be super basic, like 
+# .T or adding/subtracting a column)
+    # 1. operation 1
+    # 2. operation 2
+    # 3. operation 3
+
+# TODO: 3-D arrays are also common in Python. Append a third dimension to your matrix (hint: use np.expand_dims())
+
+# TODO: replace None with your matrix variable to print the final array
+print(f"Final Array: {None}")
 
 # TODO: Push your final changes to your GitHub branch in 3 steps:
 #   1. Stage your changes for commit using the "git add" command. You can type the filename,
