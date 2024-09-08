@@ -61,13 +61,12 @@ arr2 = fillArray(list)
 # : Do some cool matrix math with the numpy array! There's a lot of operations built into numpy.
 # I don't care how you manipulate the array, but do 3 operations on it (they can be super basic, like 
 # .T or adding/subtracting a column)
-    # 1. operation 1
-    # 2. operation 2
-    # 3. operation 3
+    # 1. np.sort(arr2)
+    # 2. np.transpose(arr2)
+    # 3. np.reciprocal(arr2)
 
-np.sort(arr2)
-np.transpose(arr2)
-np.reciprocal(arr2)
+
+
 
 # : 3-D arrays are also common in Python. Append a third dimension to your matrix (hint: use np.expand_dims())
 arr2 = np.expand_dims(arr2, axis=2)
