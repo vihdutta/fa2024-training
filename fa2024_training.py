@@ -35,33 +35,44 @@ def fillArray(data_list, size=None):
     if size == None:
         # TODO: initialize "arr" with equal number of rows and columns (hint: use np.empty())
         # check your work:
+        size = int(math.sqrt(len(data_list)))
+        arr = np.empty((size, size))
         if (arr.shape == (math.sqrt(len(data_list)), math.sqrt(len(data_list)))): print("Array Initialized Correctly!")
     else:
         # TODO: initialize "arr" with 1 row and {size} columns
+        arr = np.empty((1,size))
         if (arr.shape == (1, size)): print("Array Initialized Correctly!") # check your work: prints the shape of the array
     # TODO: Use a for loop to fill arr with each item in data list, in order
+    for i in data_list:
+        if i < size:
+            arr[i] = data_list[i]
     
     # returns the array
     return arr
 
 # TODO: Complete the main script
 # Lists are a common Python container, similar to vectors in C++ and MATLAB
-list = [1, 2, 3, 4] # this is a really simple list, with 5 elements
+list_a = [1, 2, 3, 4] # this is a really simple list, with 5 elements
 
 # TODO: Call fillArray() on list (with or without a size argument -- up to you!), then store the return
 # array in a variable
+new_arr = fillArray(list_a)
 
 # TODO: Do some cool matrix math with the numpy array! There's a lot of operations built into numpy.
 # I don't care how you manipulate the array, but do 3 operations on it (they can be super basic, like 
 # .T or adding/subtracting a column)
     # 1. operation 1
+print(f"1: {new_arr * new_arr}")
     # 2. operation 2
+print(f"2: {new_arr - new_arr}")
     # 3. operation 3
+print(f"3: {new_arr.T * new_arr}")
 
 # TODO: 3-D arrays are also common in Python. Append a third dimension to your matrix (hint: use np.expand_dims())
+new_arr = np.expand_dims(new_arr, axis=2)
 
 # TODO: replace None with your matrix variable to print the final array
-print(f"Final Array: {None}")
+print(f"Final Array: {new_arr}")
 
 # TODO: Push your final changes to your GitHub branch in 3 steps:
 #   1. Stage your changes for commit using the "git add" command. You can type the filename,
