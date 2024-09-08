@@ -75,7 +75,7 @@ arr2 = np.expand_dims(arr2, axis=2)
 # : replace None with your matrix variable to print the final array
 print(f"Final Array: {arr2}")
 
-# TODO: Push your final changes to your GitHub branch in 3 steps:
+# : Push your final changes to your GitHub branch in 3 steps:
 #   1. Stage your changes for commit using the "git add" command. You can type the filename,
 #      or just use "git add --all" to stage all the files you've changed in the repository.
 #   2. Commit your changes to the reppository with "git commit -m "{commit message}"". Your
