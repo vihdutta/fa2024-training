@@ -34,13 +34,15 @@ def fillArray(data_list, size=None):
     arr = None
     if size == None:
         # TODO: initialize "arr" with equal number of rows and columns (hint: use np.empty())
-        # check your work:
+        arr = np.empty(len(data_list))
         if (arr.shape == (math.sqrt(len(data_list)), math.sqrt(len(data_list)))): print("Array Initialized Correctly!")
     else:
         # TODO: initialize "arr" with 1 row and {size} columns
+        arr = np.zeros((1, size))
         if (arr.shape == (1, size)): print("Array Initialized Correctly!") # check your work: prints the shape of the array
     # TODO: Use a for loop to fill arr with each item in data list, in order
-    
+    for i in range(len(data_list)):
+        arr[i] = data_list[i]
     # returns the array
     return arr
 
@@ -50,18 +52,24 @@ list = [1, 2, 3, 4] # this is a really simple list, with 5 elements
 
 # TODO: Call fillArray() on list (with or without a size argument -- up to you!), then store the return
 # array in a variable
-
+new_arr = fillArray(list)
 # TODO: Do some cool matrix math with the numpy array! There's a lot of operations built into numpy.
 # I don't care how you manipulate the array, but do 3 operations on it (they can be super basic, like 
 # .T or adding/subtracting a column)
     # 1. operation 1
     # 2. operation 2
     # 3. operation 3
+new_arr[3] = 9999999999999999
+print(new_arr)
+new_arr = np.log(new_arr)
+print(new_arr)
+new_arr = new_arr ** 2
+print(new_arr)
 
 # TODO: 3-D arrays are also common in Python. Append a third dimension to your matrix (hint: use np.expand_dims())
-
+new_arr = np.expand_dims(new_arr, axis=1)
 # TODO: replace None with your matrix variable to print the final array
-print(f"Final Array: {None}")
+print(f"Final Array: {new_arr}")
 
 # TODO: Push your final changes to your GitHub branch in 3 steps:
 #   1. Stage your changes for commit using the "git add" command. You can type the filename,
